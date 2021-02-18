@@ -5,9 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #222;
+            width:100%;
+        }
+
+        canvas {
+            background-color: #eee;
+            margin: 0 auto;
+            display: block;
+        }
+        
+    </style>
 </head>
 <body>
-    <canvas id="cnv" width="500px" height="500px"></canvas>
-    
+    <canvas id="canvas" width="1000" height="1000"></canvas>
+
+    <script>
+
+    let cw = document.getElementById("canvas");
+    let ctx = cw.getContext("2d");
+    ctx.moveTo(590,300);
+    ctx.lineTo(590,500);
+    ctx.fillStyle = "darkgrey";
+    ctx.fill();
+    ctx.stroke();
+
+    var width = 1000;
+        var height = 500;
+        var middle = width/2;
+        var m = Math.PI;
+
+        function makeRect(x, y, z, a) {
+            ctx.beginPath();
+            ctx.rect(x, y, z, a);
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = "#222";
+            ctx.stroke();
+        }
+
+    </script>
 </body>
 </html>
