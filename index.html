@@ -30,6 +30,30 @@
     ctx.fillStyle = "darkgrey";
     ctx.fill();
     ctx.stroke();
+
+    function circle(x, y, r, sAngle, eAngle, c) {  //circles
+            ctx.beginPath(); 
+            ctx.arc(x,y,r,sAngle,eAngle, c);
+            ctx.stroke();
+        }
+
+        function line(a, b, c, d) {  //lines
+            ctx.beginPath();
+            ctx.moveTo(a,b);
+            ctx.lineTo(c,d);
+            ctx.stroke();
+        }
+
+        function rect(x, y, w, h, c) { //rectangles
+            ctx.beginPath();
+            ctx.rect(x, y, w, h);
+            ctx.fillStyle = c;
+            ctx.fill();
+        }
+
+        //line(400,175,600,175);
+        circle(500,175,100,0,1 * Math.PI, true);
+        rect(465,150,35,35,);
     </script>
 </body>
 </html>
