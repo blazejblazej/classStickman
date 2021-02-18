@@ -30,6 +30,7 @@
      // please add comments   
     let cw = document.getElementById("canvas");
     let ctx = cw.getContext("2d");
+<<<<<<< HEAD
     const mathpi2 = 2*Math.PI;
     //square in the middle
     ctx.moveTo(590,300);
@@ -53,6 +54,31 @@
     ctx.fillStyle = "darkgrey";
     ctx.fill();
     ctx.stroke();
+=======
+
+        var m = Math.PI;
+        var recWidth = 200;
+        var recHeight = 200;
+        var xPos = (document.getElementById("canvas").width/2) - (recWidth/2);
+
+        var yPos = (document.getElementById("canvas").height/2) - (recHeight/2);
+
+        function makeRect(x, y, z, a) {
+            ctx.beginPath();
+            ctx.rect(x, y, z, a);
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = "#222";
+            ctx.stroke();
+        }
+
+        makeRect(xPos,yPos,recWidth,recHeight);
+        makeRect(390,400,10,70);
+        makeRect(350,390, 40, 100);
+        makeRect(360,490, 30, 60);
+        makeRect(350,550, 50, 10);
+
+
+>>>>>>> dianaBranch
     </script>
 </body>
 </html>
