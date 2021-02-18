@@ -31,6 +31,7 @@
     let cw = document.getElementById("canvas");
     let ctx = cw.getContext("2d");
 <<<<<<< HEAD
+<<<<<<< HEAD
     const mathpi2 = 2*Math.PI;
     //square in the middle
     ctx.moveTo(590,300);
@@ -79,6 +80,33 @@
 
 
 >>>>>>> dianaBranch
+=======
+
+    function circle(x, y, r, sAngle, eAngle, c) {  //circles
+            ctx.beginPath(); 
+            ctx.arc(x,y,r,sAngle,eAngle, c);
+            ctx.stroke();
+        }
+
+        function line(a, b, c, d) {  //lines
+            ctx.beginPath();
+            ctx.moveTo(a,b);
+            ctx.lineTo(c,d);
+            ctx.stroke();
+        }
+
+        function rect(x, y, w, h, c) { //rectangles
+            ctx.beginPath();
+            ctx.rect(x, y, w, h);
+            ctx.stroke();
+        }
+
+        //line(400,175,600,175);
+        circle(490,300,100,0,1 * Math.PI, true);
+        rect(470,250,35,35,);
+        circle(490,270,10,0,2 * Math.PI, true);
+        rect();
+>>>>>>> kieranBranch
     </script>
 </body>
 </html>
