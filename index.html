@@ -31,8 +31,25 @@
     let cw = document.getElementById("canvas");
     let ctx = cw.getContext("2d");
     const mathpi2 = 2*Math.PI;
+    //square in the middle
     ctx.moveTo(590,300);
     ctx.lineTo(590,500);
+    ctx.moveTo(390,500);
+    ctx.lineTo(590,500);
+    ctx.moveTo(390,300)
+    ctx.lineTo(590,300)
+    ctx.moveTo(390,300)
+    ctx.lineTo(390,500)
+    //legs
+        //LEFT LEG
+        ctx.moveTo(440,500);
+        ctx.lineTo(420,550);
+        //right leg
+        ctx.moveTo(540,500);
+        ctx.lineTo(560,550);
+        //connect
+        ctx.moveTo(560,550);
+        ctx.lineTo(420,550);
     ctx.fillStyle = "darkgrey";
     ctx.fill();
     ctx.stroke();
