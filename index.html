@@ -30,7 +30,29 @@
      // please add comments   
     let cw = document.getElementById("canvas");
     let ctx = cw.getContext("2d");
-
+    const mathpi2 = 2*Math.PI;
+    //square in the middle
+    ctx.moveTo(590,300);
+    ctx.lineTo(590,500);
+    ctx.moveTo(390,500);
+    ctx.lineTo(590,500);
+    ctx.moveTo(390,300)
+    ctx.lineTo(590,300)
+    ctx.moveTo(390,300)
+    ctx.lineTo(390,500)
+    //legs
+        //LEFT LEG
+        ctx.moveTo(440,500);
+        ctx.lineTo(420,550);
+        //right leg
+        ctx.moveTo(540,500);
+        ctx.lineTo(560,550);
+        //connect
+        ctx.moveTo(560,550);
+        ctx.lineTo(420,550);
+    ctx.fillStyle = "darkgrey";
+    ctx.fill();
+    ctx.stroke();
         var m = Math.PI;
         var recWidth = 200;
         var recHeight = 200;
@@ -46,13 +68,59 @@
             ctx.stroke();
         }
 
-        makeRect(xPos,yPos,recWidth,recHeight);
-        makeRect(390,400,10,70);
-        makeRect(350,390, 40, 100);
-        makeRect(360,490, 30, 60);
-        makeRect(350,550, 50, 10);
+        // Right arm
+
+        makeRect(380,380,10,70);
+        makeRect(340,370, 40, 100);
+        makeRect(350,470, 30, 60);
+        makeRect(340,530, 50, 40);
+        circle(340,575, 5, 2 * Math.PI, false);
+        makeRect(345,570, 40, 20);
+        makeRect(360,590, 10, 20);
+        makeRect(360,520, 10, 20);
+        makeRect(345,610, 40, 30);
 
 
+
+        function circle(x, y, r, sAngle, eAngle, c) {  //circles
+            ctx.beginPath(); 
+            ctx.arc(x,y,r,sAngle,eAngle, c);
+            ctx.stroke();
+        }
+
+        function line(a, b, c, d) {  //lines
+            ctx.beginPath();
+            ctx.moveTo(a,b);
+            ctx.lineTo(c,d);
+            ctx.stroke();
+        }
+
+        function rect(x, y, w, h, c) { //rectangles
+            ctx.beginPath();
+            ctx.rect(x, y, w, h);
+            ctx.stroke();
+        }
+
+        //line(400,175,600,175);
+        circle(490,300,100,0,1 * Math.PI, true); //head
+        
+        rect(470,240,35,35,); //eye socket
+        
+        circle(490,260,10,0,2 * Math.PI, true); //eye
+        
+        rect(390,300,200,15); //neck
+        
+        rect(400,270,40,15); //left rect
+        
+        rect(550,270,30,15); //right rect
+        
+        circle(525,275,10,0,2 * Math.PI); //right circle
+        
+        line(475,200,475,225); //top left rect
+        line(425,225,475,225);
+        
+        line(500,200,500,225); //top right rect
+        line(500,225,555,225);
     </script>
 </body>
 </html>
