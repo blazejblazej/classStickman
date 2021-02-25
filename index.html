@@ -27,11 +27,55 @@
     <canvas id="canvas" width="1000" height="1000"></canvas>
 
     <script>
-
+     // please add comments   
     let cw = document.getElementById("canvas");
     let ctx = cw.getContext("2d");
+    const mathpi2 = 2*Math.PI;
+    //square in the middle
+    ctx.moveTo(590,300);
+    ctx.lineTo(590,500);
+    ctx.moveTo(390,500);
+    ctx.lineTo(590,500);
+    ctx.moveTo(390,300)
+    ctx.lineTo(590,300)
+    ctx.moveTo(390,300)
+    ctx.lineTo(390,500)
+    //legs
+        //LEFT LEG
+        ctx.moveTo(440,500);
+        ctx.lineTo(420,550);
+        //right leg
+        ctx.moveTo(540,500);
+        ctx.lineTo(560,550);
+        //connect
+        ctx.moveTo(560,550);
+        ctx.lineTo(420,550);
+    ctx.fillStyle = "darkgrey";
+    ctx.fill();
+    ctx.stroke();
+        var m = Math.PI;
+        var recWidth = 200;
+        var recHeight = 200;
+        var xPos = (document.getElementById("canvas").width/2) - (recWidth/2);
 
-    function circle(x, y, r, sAngle, eAngle, c) {  //circles
+        var yPos = (document.getElementById("canvas").height/2) - (recHeight/2);
+
+        function makeRect(x, y, z, a) {
+            ctx.beginPath();
+            ctx.rect(x, y, z, a);
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = "#222";
+            ctx.stroke();
+        }
+
+        makeRect(xPos,yPos,recWidth,recHeight);
+        makeRect(390,400,10,70);
+        makeRect(350,390, 40, 100);
+        makeRect(360,490, 30, 60);
+        makeRect(350,550, 50, 10);
+
+
+        function circle(x, y, r, sAngle, eAngle, c) {  //circles
             ctx.beginPath(); 
             ctx.arc(x,y,r,sAngle,eAngle, c);
             ctx.stroke();
