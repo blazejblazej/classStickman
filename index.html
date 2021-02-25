@@ -42,14 +42,14 @@
     ctx.lineTo(390,500)
     //legs
         //LEFT LEG
-        ctx.moveTo(440,500);
-        ctx.lineTo(420,550);
+        ctx.moveTo(400,500);
+        ctx.lineTo(420,530);
         //right leg
-        ctx.moveTo(540,500);
-        ctx.lineTo(560,550);
+        ctx.moveTo(580,500);
+        ctx.lineTo(560,530);
         //connect
-        ctx.moveTo(560,550);
-        ctx.lineTo(420,550);
+        ctx.moveTo(560,530);
+        ctx.lineTo(420,530);
     ctx.fillStyle = "black";
     ctx.fill();
     ctx.stroke();
@@ -115,18 +115,20 @@
         line(500,200,500,225); //top right rect
         line(500,225,555,225);
 
-        rect(480,550,20,30);
-        
         //foot
-        ctx.moveTo(460,570); //top
-        ctx.lineTo(520,570);
-        ctx.moveTo(460,570); //left
-        ctx.lineTo(455,600);
-        ctx.moveTo(520,570); //right
-        ctx.lineTo(525,600);
-        ctx.moveTo(455,600); //bottom
-        ctx.lineTo(525,600);
+        ctx.moveTo(460,550); //top
+        ctx.lineTo(520,550);
+        ctx.moveTo(460,550); //left
+        ctx.lineTo(455,580);
+        ctx.moveTo(520,550); //right
+        ctx.lineTo(525,580);
+        ctx.moveTo(455,580); //bottom
+        ctx.lineTo(525,580);
         ctx.stroke();
+
+        rect(480,530,20,30);
+        
+        
     </script>
 </body>
 </html>
