@@ -50,9 +50,10 @@
         //connect
         ctx.moveTo(560,550);
         ctx.lineTo(420,550);
-    ctx.fillStyle = "darkgrey";
+    ctx.fillStyle = "black";
     ctx.fill();
     ctx.stroke();
+
         var m = Math.PI;
         var recWidth = 200;
         var recHeight = 200;
@@ -68,7 +69,6 @@
             ctx.stroke();
         }
 
-        makeRect(xPos,yPos,recWidth,recHeight);
         makeRect(390,400,10,70);
         makeRect(350,390, 40, 100);
         makeRect(360,490, 30, 60);
@@ -114,6 +114,19 @@
         
         line(500,200,500,225); //top right rect
         line(500,225,555,225);
+
+        rect(480,550,20,30);
+        
+        //foot
+        ctx.moveTo(460,570); //top
+        ctx.lineTo(520,570);
+        ctx.moveTo(460,570); //left
+        ctx.lineTo(455,600);
+        ctx.moveTo(520,570); //right
+        ctx.lineTo(525,600);
+        ctx.moveTo(455,600); //bottom
+        ctx.lineTo(525,600);
+        ctx.stroke();
     </script>
 </body>
 </html>
